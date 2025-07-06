@@ -1,0 +1,4 @@
+api_keys:
+  - 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
+
+default_model: deepseek/deepseek-v3-base:free
