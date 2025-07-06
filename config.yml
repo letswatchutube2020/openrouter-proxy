@@ -1,5 +1,5 @@
 api_keys:
-  - "sk-or-your-api-key-here"
+  - "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"
 
 default_model: "deepseek/deepseek-v3-base:free"
 
@@ -10,7 +10,7 @@ openrouter:
   rate_limit_cooldown: 0
   key_selection_strategy: "round-robin"
   keys:
-    - "sk-or-your-api-key-here"
+    - "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"
 
 requestProxy:
   enabled: false
