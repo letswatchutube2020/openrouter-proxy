@@ -200,6 +200,9 @@ async def proxy_with_httpx(
         logger.error("Internal error: %s", str(e))
         raise HTTPException(status_code=500, detail="Internal Proxy Error") from e
 
+@router.api_route("/v1/chat/completions", methods=["POST"])
+async def janitorai_compat(request: Request):
+    return await proxy_endpoint(request, "/chat/completions")
 
 @router.get("/health")
 async def health_check():
