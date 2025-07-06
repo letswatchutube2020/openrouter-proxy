@@ -87,7 +87,8 @@ async def proxy_endpoint(
     request: Request, path: str, authorization: Optional[str] = Header(None)
 ):
     """Main proxy endpoint for handling all requests to OpenRouter API."""
-    is_public = any(f"/api/v1{path}".startswith(ep) for ep in config["openrouter"]["public_endpoints"])
+   full_path = f"/v1{path}" if not path.startswith("/v1") else path
+is_public = any(full_path.startswith(ep) for ep in config["openrouter"]["public_endpoints"])
 
     # Verify authorization for non-public endpoints
     if not is_public:
