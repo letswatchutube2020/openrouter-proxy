@@ -1,0 +1,17 @@
+api_keys:
+  - "sk-or-your-api-key-here"
+
+default_model: "deepseek/deepseek-v3-base:free"
+
+openrouter:
+  base_url: "https://openrouter.ai/api/v1"
+  public_endpoints:
+    - "https://openrouter-proxy-91ur.onrender.com/v1/chat/completions"
+  rate_limit_cooldown: 0
+  key_selection_strategy: "round-robin"
+  keys:
+    - "sk-or-your-api-key-here"
+
+requestProxy:
+  enabled: false
+  url: ""
